@@ -1,8 +1,11 @@
 package com.wipro.codetest.dagger
 
+import androidx.lifecycle.ViewModelProvider
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.wipro.codetest.interfaces.APICallInterface
 import com.wipro.codetest.utilities.BASE_URL
+import com.wipro.codetest.utilities.ViewModelFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -37,10 +40,21 @@ class ApiModule {
     }
 
 
+
     @Provides
     fun provideLogginInterceptor(): HttpLoggingInterceptor {
         var logging = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger.DEFAULT)
         return logging
+    }
+
+    @Provides
+    fun provideAPICallInterface(retrofit: Retrofit): APICallInterface {
+        return retrofit.create<APICallInterface>(APICallInterface::class.java)
+    }
+
+    @Provides
+    fun provideViewModelFactory(apiCallInterface: APICallInterface): ViewModelProvider.Factory {
+        return ViewModelFactory(apiCallInterface)
     }
 
 
