@@ -1,4 +1,4 @@
-package com.wipro.wiprocodetest.views
+package com.wipro.codetest.views
 
 
 import android.os.Bundle

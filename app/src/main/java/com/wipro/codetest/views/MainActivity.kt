@@ -1,7 +1,7 @@
-package com.wipro.wiprocodetest.views
+package com.wipro.codetest.views
 
 import android.os.Bundle
-import com.wipro.wiprocodetest.R
+import com.wipro.codetest.R
 
 class MainActivity : BaseActivity() {
 

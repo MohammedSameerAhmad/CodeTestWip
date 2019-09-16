@@ -1,4 +1,4 @@
-package com.wipro.wiprocodetest.utilities
+package com.wipro.codetest.utilities
 
 import android.content.BroadcastReceiver
 import android.content.Context

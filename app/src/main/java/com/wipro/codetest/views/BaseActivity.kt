@@ -1,4 +1,4 @@
-package com.wipro.wiprocodetest.views
+package com.wipro.codetest.views
 
 import android.content.IntentFilter
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.snackbar.Snackbar.LENGTH_INDEFINITE
 import com.google.android.material.snackbar.Snackbar.make
-import com.wipro.wiprocodetest.R
-import com.wipro.wiprocodetest.utilities.ConnectivityReceiver
+import com.wipro.codetest.R
+import com.wipro.codetest.utilities.ConnectivityReceiver
 
 
 open class BaseActivity : AppCompatActivity(), ConnectivityReceiver.ConnectivityReceiverListener {

@@ -1,4 +1,4 @@
-package com.wipro.wiprocodetest
+package com.wipro.codetest
 
 import org.junit.Test
 
