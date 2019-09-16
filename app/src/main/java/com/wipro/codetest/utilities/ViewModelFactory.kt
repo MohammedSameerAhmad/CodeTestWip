@@ -9,7 +9,7 @@ import javax.inject.Inject
 class ViewModelFactory @Inject constructor(val apiCallInterface: APICallInterface) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(ListFragmentViewModel::class.java!!)) {
+        if (modelClass.isAssignableFrom(ListFragmentViewModel::class.java)) {
             return ListFragmentViewModel(apiCallInterface) as T
         }
         throw IllegalArgumentException("Unknown class name")

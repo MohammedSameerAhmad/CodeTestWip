@@ -16,7 +16,6 @@ class MyApplication : Application() {
             .appModule(AppModule(this))
             .apiModule(ApiModule())
             .build()
-
     }
 
     fun apiComponent(): ApiComponent {

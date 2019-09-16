@@ -23,7 +23,16 @@ class CustomAdapter constructor(
 
     private val data = ArrayList<Rows>()
 
-
+    init {
+        viewModel.response.observe(lifecycleOwner, Observer {
+            data.clear()
+            if (it != null) {
+                data.addAll(it.rows)
+            }
+            notifyDataSetChanged()
+        })
+        setHasStableIds(true)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
         val inflater = LayoutInflater.from(parent.context)
